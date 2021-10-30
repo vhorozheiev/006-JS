@@ -1,13 +1,34 @@
 /* Write a JavaScript function to get the last element of an
 array */
 
-let array = [];
+let array = ["apple", "orange", "peach", "lemon"];
 
 function getLastElement(array) {
-    return array[array.length - 1];
-    //return array.slice(-1);
+    try {
+        if (array.length == 0) {
+            throw new Error();
+        } else {
+            console.log(array[array.length - 1]);
+            //console.log(array.slice(-1));
+        }
+    } catch (error) {
+        console.log("Please, enter array with minimum one element");
+    }
 }
-console.log(getLastElement(array));
+getLastElement(array);
+
+
+// /* Write a simple JavaScript program to join all elements of the
+// following array into a string */
+
+// let array = ["apple", "orange", "peach", "lemon"];
+
+// function joinArrayToString(array) {
+//     return array.join(",");
+
+// }
+// console.log(joinArrayToString(array));
+
 
 
 // /* There are two arrays with individual values, write a
@@ -39,30 +60,20 @@ console.log(getLastElement(array));
 // console.log(getSumOfIndex(firstArray, secondArray));
 
 
-// /* Write a simple JavaScript program to join all elements of the
-// following array into a string */
-
-// let array = ["apple", "orange", "peach", "lemon"];
-
-// function joinArrayToString(array) {
-//     return array.join(",");
-
-// }
-// console.log(joinArrayToString(array));
-
-
 // /* Write a JavaScript program to calculate the area and
 // perimeter of a rectangle. Rectangle should be an object with
 // properties width and height and methods getArea() and
 // getPerimeter(); */
 
 // let rectangle = {
-//     width: 200,
+//     width: 50,
 //     height: 100,
 //     getArea() {
+//         if (this.width <= 0 || this.height <= 0) { throw new Error("Width or heigth cannot be <= 0") }
 //         return this.width * this.height;
 //     },
 //     getPerimeter() {
+//         if (this.width <= 0 || this.height <= 0) { throw new Error("Width or heigth cannot be <= 0") }
 //         return (this.width + this.height) * 2;
 //     }
 // }
